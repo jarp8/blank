@@ -39,7 +39,5 @@
     <script src="{{asset('vendor/datatables/js/dataTables.buttons.min.js')}}"></script>
     <script src="{{asset('vendor/datatables/js/buttons.bootstrap4.min.js')}}"></script>
     <script src="{{asset('vendor/datatables/js/buttons.server-side.js')}}"></script>
-
-    {{-- TODO: Cambiar el cdn de colVis a local --}}
-    <script src="https://cdn.datatables.net/buttons/2.3.4/js/buttons.colVis.min.js"></script>
+    <script src="{{asset('vendor/datatables/js/buttons.colVis.min.js')}}"></script>
 @stop

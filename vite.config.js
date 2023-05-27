@@ -20,7 +20,8 @@ export default defineConfig({
                         'node_modules/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js',
                         'node_modules/datatables.net-responsive/js/dataTables.responsive.min.js',
                         'node_modules/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js',
-                        'node_modules/datatables.net-buttons/js/dataTables.buttons.min.js'
+                        'node_modules/datatables.net-buttons/js/dataTables.buttons.min.js',
+                        'node_modules/datatables.net-buttons/js/buttons.colVis.min.js'
                     ],
                     dest: 'public/vendor/datatables/js/'
                 },

@@ -6,6 +6,7 @@ use App\Models\User;
 use App\Models\PermissionPermission;
 
 use Illuminate\Support\Facades\Gate;
+use Illuminate\Support\Facades\Schema;
 use Illuminate\Foundation\Support\Providers\AuthServiceProvider as ServiceProvider;
 
 class AuthServiceProvider extends ServiceProvider
@@ -28,11 +29,14 @@ class AuthServiceProvider extends ServiceProvider
     {
         $this->registerPolicies();
 
-        $permissions = PermissionPermission::all();
-        foreach ($permissions as $permission) {
-            Gate::define($permission->relation, function (User $user) use ($permission) {
-                return $user->hasPermissions($permission->relation);
-            });
+        //Si existe la tabla de permission_permissions definir las gates
+        if(Schema::hasTable('permission_permissions')) {
+            $permissions = PermissionPermission::all();
+            foreach ($permissions as $permission) {
+                Gate::define($permission->relation, function (User $user) use ($permission) {
+                    return $user->hasPermissions($permission->relation);
+                });
+            }
         }
     }
 }

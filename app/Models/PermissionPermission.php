@@ -9,6 +9,8 @@ class PermissionPermission extends Model
 {
     use HasFactory;
 
+	protected $table = 'permission_permissions';
+
     protected $fillable = [
 		'relation',
         'permission_module_id',

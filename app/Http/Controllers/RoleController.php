@@ -3,9 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\DataTables\RolesDataTable;
+
 use App\Http\Requests\RoleRequest;
+
 use App\Models\PermissionModule;
 use App\Models\Role;
+
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;

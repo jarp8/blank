@@ -30,7 +30,7 @@ $(function(){
 
     function checkPermissions(checkbox) {
         let me = $(checkbox);
-        let parentId = me.data('parent');
+        // let parentId = me.data('parent');
         let moduleId = me.data('me');
 
         $(`input[data-parent=${moduleId}]:enabled`).each(function(){

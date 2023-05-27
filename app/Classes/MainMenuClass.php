@@ -2,24 +2,25 @@
 
 namespace App\Classes;
 
+use App\Classes\PermissionModuleClass;
+
 use App\Models\MenuMainMenu;
 use App\Models\MenuViewname;
 use App\Models\PermissionModule;
-use App\Classes\PermissionModuleClass;
 
 class MainMenuClass {
 
     public $permissionsArray;
     public $menuPosition = 0;
 
-	public function insertMenu()
+	public function insertMenu($structure = null)
 	{
-		$this->createMenus($this->getStructure());
+		$this->createMenus($structure ?? $this->getStructure());
 	}
 
     public function createMenus($menus)
 	{
-		foreach ($menus as $key => $value) {
+		foreach ($menus as $value) {
 			$this->createMenu($value);
 		}
 	}

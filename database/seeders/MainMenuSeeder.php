@@ -14,6 +14,31 @@ class MainMenuSeeder extends Seeder
      */
     public function run(): void
     {
-        (new MainMenuClass)->insertMenu();
+        (new MainMenuClass)->insertMenu(
+            [
+                [
+                  "name" => "home",
+                  "icon" => "fa fa-home",
+                ],
+                [
+                  "name" => "dashboard",
+                  "icon" => null,
+                ],
+                [
+                  "name" => "Users",
+                  "icon" => null,
+                  "submenu" => [
+                        [
+                            "name" => "roles",
+                            "icon" => null,
+                        ],
+                        [
+                            "name" => "users",
+                            "icon" => null,
+                        ]
+                    ]
+                ]
+            ]
+        );
     }
 }

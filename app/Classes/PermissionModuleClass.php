@@ -2,6 +2,10 @@
 
 namespace App\Classes;
 
+use App\Models\PermissionFunction;
+use App\Models\PermissionModule;
+use App\Models\PermissionPermission;
+
 use Exception;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
@@ -9,10 +13,6 @@ use RecursiveRegexIterator;
 use ReflectionClass;
 use ReflectionMethod;
 use RegexIterator;
-
-use App\Models\PermissionModule;
-use App\Models\PermissionPermission;
-use App\Models\PermissionFunction;
 
 class PermissionModuleClass {
     
