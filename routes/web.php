@@ -8,6 +8,8 @@ use App\Http\Controllers\PermissionModuleController;
 use App\Http\Controllers\PermissionPermissionController;
 use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
+use App\Models\TemHome;
+use App\Models\TemHomeCreditCard;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,7 +25,11 @@ use App\Http\Controllers\UserController;
 Auth::routes();
 
 Route::get('/', function () {
-    return view('welcome');
+    $cards = TemHomeCreditCard::all();
+    
+    $text = TemHome::where('is_active', 1)->first();
+
+    return view('welcome', compact('cards', 'text'));
 })->name('/');
 
 Route::get('/login', function () {
