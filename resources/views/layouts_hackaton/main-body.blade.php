@@ -7,7 +7,30 @@
                 <h1 class="main-title">¿En qué producto estás interesado?</h1>
     
                 <div class="row cards">
-                    <div class="col-12 col-md-4 card-item">
+                    @foreach ($cards as $key => $card)
+                        <div class="col-12 col-md-4 card-item">
+                            <h3 
+                                class="card-title
+                                @if ($key == 0)
+                                    negro-credito
+                                @endif
+                                @if ($key == 1)
+                                    rojo-banorte
+                                @endif
+                                @if ($key == 2)
+                                    gris-nomina
+                                @endif
+                                ">
+                                {{$card->name}}
+                            </h3>
+                            <div class="card-image-container">
+                                <a href="{{route('credit_cards.index')}}">
+                                    <img src="https://www.cpxproject.com/{{($card->image)}}" alt="Tarjeta de crédito">
+                                </a>
+                            </div>
+                        </div>
+                    @endforeach
+                    {{-- <div class="col-12 col-md-4 card-item">
                         <h3 class="card-title negro-credito">Tarjeta de crédito</h3>
                         <div class="card-image-container">
                             <a href="{{route('credit_cards.index')}}">
@@ -26,7 +49,7 @@
                         <div class="card-image-container">
                             <img src="{{asset('images/image 5.png')}}" alt="Tarjeta de nómina">
                         </div>
-                    </div>
+                    </div> --}}
                 </div>
                 <div class="row">
                     <div class="col-12 text-center">
@@ -103,15 +126,21 @@
             <div class="why-banorte row align-items-center">
                 <div class="col-12 col-md-6">
                     <p class="why-banorte-text">
-                        Banorte, con una trayectoria de más de <span class="why-banorte-span">100 años</span>, se ha convertido en uno de los bancos 
+
+                        {!! $text->description ?? 'Banorte, con una trayectoria de más de <span class="why-banorte-span">100 años</span>, se ha convertido en uno de los bancos 
                         más importantes de todo el país, llevando a las empresas, familias, 
                         y personas en general de México a tener un control total de sus finanzas, 
-                        y por supuesto de su dinero de una forma fácil y segura.
+                        y por supuesto de su dinero de una forma fácil y segura.' !!}
                     </p>
                 </div>
                 <div class="col-12 col-md-6">
                     <div>
-                        <img src="{{asset('images/KS25TURC7JFSVCDJLDAR42KAEA 1.png')}}" alt="¿Por qué banorte? imagen">
+                        <img src="
+                        @if ($text->image ?? false)
+                        https://www.cpxproject.com/{{($text->image)}}
+                        @else
+                        {{asset('images/KS25TURC7JFSVCDJLDAR42KAEA 1.png')}}
+                        @endif" alt="¿Por qué banorte? imagen">
                     </div>
                 </div>
             </div>
