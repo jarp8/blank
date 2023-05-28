@@ -26,6 +26,11 @@ Route::get('/', function () {
     return view('welcome');
 })->name('/');
 
+Route::get('/login', function () {
+    return view('layouts_hackaton.login');
+})->name('layouts_hackaton.login');
+
+
 Route::get('/credit_cards', function(){
     return view('credit-cards.index');
 })->name('credit_cards.index');

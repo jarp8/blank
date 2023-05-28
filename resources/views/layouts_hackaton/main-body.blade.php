@@ -30,7 +30,7 @@
                 </div>
                 <div class="row">
                     <div class="col-12 text-center">
-                        <button class="btn btn-transparent">¡Ya soy cliente!</button>
+                        <a href="{{route('layouts_hackaton.login')}}" class="btn midle btn-transparent ">¡Ya soy cliente!</a>
                     </div>
                 </div>
             </main>
