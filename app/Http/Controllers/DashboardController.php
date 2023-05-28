@@ -15,6 +15,8 @@ class DashboardController extends Controller
      */
     public function index(): View
     {
-        return view('dashboard');
+        return view('layouts_hackaton.final-credit');
     }
+
+    
 }

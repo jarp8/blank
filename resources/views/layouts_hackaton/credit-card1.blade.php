@@ -1,0 +1,2 @@
+<img class="background-credit-4" src="{{ URL::asset('/images/Vector 10.png') }}" alt="Girl in a jacket" >
+<img class="background-credit-3" src="{{ URL::asset('/images/Vector 9.png') }}" alt="Girl in a jacket" >
