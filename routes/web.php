@@ -26,6 +26,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::get('/credit_cards', function(){
+    return view('credit-cards.index');
+})->name('credit_cards.index');
+
+Route::get('/credit_cards/create', function(){
+    return view('credit-cards.create.first-form');
+})->name('credit_cards.first-form');
+
+Route::get('/credit_cards/create2', function(){
+    return view('credit-cards.create.second-form');
+})->name('credit_cards.first-form2');
+
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home.index');
 
 Route::middleware(['auth', 'permissions'])->group(function () {

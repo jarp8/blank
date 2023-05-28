@@ -7,116 +7,436 @@
 // Bootstrap
 @import 'bootstrap/scss/bootstrap';
 
+//fonts
+@font-face {
+    font-family: 'Gotham Black';
+    src: url('fonts/Gotham-Black.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
 
-// .container-campusTech{
-// 	margin-top: 80px;
-// 	margin-bottom: 3%;
-//   height: 100vh;
-// }
+@font-face {
+    font-family: 'Gotham';
+    src: url('../../public/fonts/GothamBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
 
-// .menu {
-//     width: 200px;
-//     height: 100vh;
-//     background-color: #f1f1f1;
-//     position: fixed;
-//     top: 0;
-//     right: -200px;
-//     transition: right 0.3s ease-in-out;
-// }
+@font-face {
+    font-family: 'Gotham';
+    src: url('../../public/fonts/GothamBook.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
 
-// .slider {
-//     position: fixed;
-//     top: 0;
-//     right: 0;
-//     height: 100vh;
-//     width: 0px;
-//     background: rgb(92,38,43);
-//     background: linear-gradient(90deg, rgba(92,38,43,1) 0%, rgba(80,65,73,1) 39%);
-//     overflow-y: auto;
-//     transition: width 0.5s;
-//     // border-radius: 1%;
-//     border-top-left-radius: 2%;
-//     border-bottom-left-radius: 2%;
-//   }
-  
-//   .slider .slide {
-//     padding: 20px;
-//     font-size: 18px;
-//   }
-  
-//   .slider .slide:hover {
-//     background: rgb(92,38,43);
-// background: radial-gradient(circle, rgba(92,38,43,1) 5%, rgba(80,65,73,1) 96%);
-//     cursor: pointer;
-//   }
-
-//   .toggleButton{
-//     z-index: 1;
-//   }
+@font-face {
+    font-family: 'Gotham';
+    src: url('../../public/fonts/GothamMedium.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
 
 
-//   .footer-home{
-//     background-color:  #ec1c2d;
-//     left: 0;
-//     right: 0;
-//     position: relative;
-//     bottom: 0;
-//     width: 100%;
-// }
+//Globales
+img {
+    max-width: 100%;
+}
 
-// body {
-//    margin: 0;
-//    padding: 0;
-//    top: 0; 
-// }
-
-// .container-campusTech{
-// 	margin-top: 90px;
-// 	margin-bottom: 3%;
-// }
-
-// .footer-hackaton{
-//   background-image: url(/public/images/footer-hackaton.webp);
-// }
-
-// .heder-hackaton{
-//   background-image: url(/public/images/footer-hackaton.webp);
-// }
-
-// .background-credit{
-//   position: absolute;
-//   z-index: -1;
-//   left: 0;
-//   height: 632px;
-//   width: 115px;
-//   bottom: -240px;
-// }
+.main {
+    margin-bottom: 140px;
+}
 
 
-// .background-credit-2{
-//   position: absolute;
-//   z-index: -1;
-//   right: 0;
-//   width: 65px;
-//   height: 230px;
-// }
+//Helpers
+.negro-credito {
+    color: #3D383C;
+}
 
-// .background-credit-4{
-//   position: absolute;
-//   z-index: -1;
-//   left: -10px;
-//   height: 430px;
-//   width: 80px;
-//   bottom: -260px;
-// }
+.rojo-banorte {
+    color: $rojo-banorte;
+}
 
+.gris-nomina {
+    color: $gris-banorte;
+}
 
-// .background-credit-3{
-//   position: absolute;
-//   z-index: -1;
-//   right: -15px;
-//    width: 70px;
-//    height: 630px;
-// }
+.main-title {
+    font-family: 'Gotham';
+    font-size: 64px;
+    text-align: center;
+    font-weight: bold;
+    color: $gris-banorte;
+}
 
+@media (max-width: 768px) {
+    .main-title {
+        font-size: 38px;
+    }
 
+    .carousel-item-container-text {
+        p {
+            font-size: 4vw!important;
+        }   
+    }
+
+    .carousel-item-titles{
+        .btn-rojo{
+            width: 260px!important;
+            height: 60px!important;
+        }
+    }
+}
+
+.cards {
+    margin-top: 90px;
+    margin-bottom: 90px;
+
+    .card-item {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .card-item .card-image-container {
+        text-align: center;
+        
+        img {
+            width: 410px;
+            height: 280px;
+        }
+    }
+    
+    .card-item .card-title {
+        margin-bottom: 17px;
+        font-family: 'Gotham';
+        font-size: 35px;
+        text-align: center;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+}
+
+.btn-transparent {
+    width: 346px;
+    height: 90px;
+    color: $rojo-banorte;
+    font-family: 'Gotham';
+    font-size: 30px;
+    font-weight: bold;
+    border: 1px solid $rojo-banorte;
+    background-color: #FFF;
+    transition: background 0.3s ease;
+}
+
+.btn-transparent:hover {
+    background-color: $rojo-banorte;
+    color: #FFF;
+}
+
+.btn-transparent:active{
+    background-color: $rojo-banorte!important;
+    color: #FFF!important;
+}
+
+.btn-rojo {
+    width: 346px;
+    height: 90px;
+    color: #FFF;
+    font-family: 'Gotham';
+    font-size: 30px;
+    font-weight: bold;
+    border: none;
+    background-color: $rojo-banorte;
+
+    &:hover, &:active {
+        background-color: $rojo-banorte!important;
+        color: #FFF!important;
+        border: none!important;
+    }
+}
+
+.btn-floating-container-help {
+    z-index: 10;
+    width: 255px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+
+    .btn-floating-container-text {
+        width: 201px;
+        background-color: #FFF;
+        border-end-start-radius: 10px;
+        border-end-end-radius: 10px;
+        text-align: center;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+        .btn-floating-text{
+            font-family: 'Gotham';
+            color: $rojo-banorte;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+
+    .btn-floating-help {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 20px 0 0 auto;
+        width: 109px;
+        height: 109px;
+        border-radius: 50%;
+        background-color: #FFF;
+        box-shadow: 0px 0px 16px 16px rgba(0, 0, 0, 0.25);
+
+        &:hover{
+            cursor: pointer;
+            width: 120px;
+            height: 120px;
+            transition: width 0.3s ease, height 0.3s ease;
+
+            img {
+                width: 105px;
+                transition: width 0.3s ease;
+            }
+        }
+
+        img{
+            width: 91px;
+        }
+    }
+}
+
+.carousel-two {
+    margin-top: 22px;
+}
+
+.carousel {
+    .carousel-control-prev {
+        .hackaton-prev {
+            width: 76px;
+            height: 76px;
+            border-radius: 50%;
+            background-color: $rojo-banorte;
+            background-image: url('../../public/images/Vector\ 3.png');
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    }
+
+    .carousel-control-next {
+        .hackaton-next {
+            width: 76px;
+            height: 76px;
+            border-radius: 50%;
+            background-color: #FFF;
+            background-image: url('../../public/images/Vector\ 3\ \(1\).png');
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    }
+}
+
+.carousel-item-container-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    
+    p {
+        font-family: 'Gotham';
+        font-size: 2vw;
+        font-weight: 600;
+        color: $gris-banorte;
+    }   
+
+    .carousel-item-titles {
+        text-align: center;
+
+        h3 {
+            font-family: 'Gotham';
+            font-size: 4vw;
+            font-weight: 600;
+            color: $gris-banorte;
+        }
+
+        h2 {
+            font-family: 'Gotham';
+            font-size: 5vw;
+            font-weight: 600;
+            color: $rojo-banorte;
+            margin-bottom: 40px;
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-container img{
+        display: none;
+    }
+
+    .carousel-item-container-text {
+        flex: 1;
+    }
+}
+
+.banorte-image-title {
+    font-family: 'Gotham';
+    font-size: 5vw;
+    font-weight: 600;
+    color: $gris-banorte;
+
+    img {
+        width: 479px;
+    }
+}
+
+@media (max-width: 560px) {
+    .banorte-image-title {    
+        img {
+            width: 250px!important;
+        }
+    }
+}
+
+@media (max-width: 992px) {
+    .banorte-image-title {    
+        img {
+            width: 279px;
+
+        }
+    }
+}
+
+.why-banorte {
+    font-family: 'Gotham';
+    font-size: 1.8vw;
+    font-weight: normal;
+
+    div img {
+        width: 768px;
+    }
+}
+
+.why-banorte-span {
+    color: $rojo-banorte;
+}
+
+@media (max-width: 768px) {
+    .why-banorte {
+        font-size: 3vw;
+    }
+}
+
+.mobile-section {
+    .mobile-title{
+        padding: 20px 0;
+        border-top: 11px solid $gris-banorte;
+        border-bottom: 11px solid $gris-banorte;
+        margin-bottom: 60px;
+    }
+    .mobile-title h2{
+        font-family: 'Gotham';
+        font-size: 3.5vw;
+        font-weight: 600;
+        color: $gris-banorte;
+    }
+
+    .mobile-description {
+        padding: 0 10px;
+        font-family: 'Gotham';
+        font-size: 2.5vw;
+        font-weight: normal;
+
+        .mobile-images {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+
+            img {
+                width: 415px;
+                margin: 0 auto;
+            }
+
+            &:hover{
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.mobile-mobile {
+    display: flex;
+
+    .mobile-item{
+        flex: 1px;
+    }
+}
+
+@media (max-width: 1032px) {
+    .mobile-images {
+        img{
+            width: 285px!important;
+        }
+    }
+}
+
+@media (max-width: 932px) {
+    .mobile-description {
+        font-size: 4vw!important;
+    }
+
+    .mobile-item{
+        img {
+            width: 310px!important;
+        }
+    }
+    .mobile-mobile {
+        flex-direction: column-reverse;
+    }
+}
+
+@media (max-width: 768px) {
+    .mobile-section{
+        .mobile-title h2{
+            font-size: 5.5vw;
+        }
+    }
+}
+
+.subtitle h4 {
+    font-family: 'Gotham';
+    font-size: 28px;
+    color: $rojo-banorte;
+    font-weight: bold;
+}
+
+.benefit-items li p {
+    font-family: 'Gotham';
+    font-size: 28px;
+    font-weight: normal;
+}
+
+.credit-card-item {
+    box-shadow: 0px 4px 16px 5px rgba(0, 0, 0, 0.25);
+    border-radius: 14px;
+}
+
+.link{
+    font-family: 'Gotham';
+    font-weight: normal;
+    font-size: 28px;
+    color: $gris-banorte;
+
+    &:hover {
+        color: $rojo-banorte;
+    }
+}
+
+label{
+    font-size: 21px;
+}
+
+input, select{
+    height: 50px;
+}
