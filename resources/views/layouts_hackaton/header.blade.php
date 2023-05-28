@@ -1,7 +1,10 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light ">
+<nav class="navbar navbar-expand-lg navbar-light bg-light " style="
+box-shadow: 0px 3px 5px 0px rgba(207,145,145,0.75);
+-webkit-box-shadow: 0px 3px 5px 0px rgba(207,145,145,0.75);
+-moz-box-shadow: 0px 3px 5px 0px rgba(207,145,145,0.75);">
     <div class="container-fluid">
         {{-- <a class="navbar-brand" href="#">Navbar</a> --}}
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="{{route('/')}}">
             <img src="{{ URL::asset('/images/Logo_de_Banorte 1.png') }}" alt="" width="290" height="40"
                 class="d-inline-block align-text-top">
         </a>

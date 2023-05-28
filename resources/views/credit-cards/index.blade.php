@@ -1,7 +1,9 @@
 @extends('layouts.hackaton')
 
 @section('content')
-    <div class="container">
+    @include('layouts_hackaton.credit-card2')
+
+    <div class="container" style="margin-bottom: 40px">
         <section>
             <h1 class="main-title" style="font-weight: normal;">¿Primera tarjeta de crédito?</h1>
 

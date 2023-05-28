@@ -24,7 +24,7 @@ Auth::routes();
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('/');
 
 Route::get('/credit_cards', function(){
     return view('credit-cards.index');
@@ -37,6 +37,11 @@ Route::get('/credit_cards/create', function(){
 Route::get('/credit_cards/create2', function(){
     return view('credit-cards.create.second-form');
 })->name('credit_cards.first-form2');
+
+Route::get('credit_cards/congrats', function(){
+    return view('layouts_hackaton.final-credit');
+})->name('congrats');
+
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home.index');
 

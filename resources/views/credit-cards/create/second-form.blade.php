@@ -1,6 +1,7 @@
 @extends('layouts.hackaton')
 
 @section('content')
+    @include('layouts_hackaton.credit-card1')
     <div class="container">
         <div class="row">
             <div class="col-12 text-center subtitle" style="margin-top: 40px">
@@ -41,7 +42,9 @@
 
             <div class="row" style="margin-top: 60px">
                 <div class="col-12 text-center">
-                    <button class="btn btn-rojo" style="height: 47px; width: 240px; font-size: 18px; margin-bottom: 14px">Finalizar</button>
+                    <a href="{{route('congrats')}}" style="text-decoration: no">
+                        <button class="btn btn-rojo" style="height: 47px; width: 240px; font-size: 18px; margin-bottom: 14px">Finalizar</button>
+                    </a>
                 </div>
             </div>
         </div>

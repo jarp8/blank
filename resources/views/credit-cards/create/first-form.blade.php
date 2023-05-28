@@ -1,6 +1,7 @@
 @extends('layouts.hackaton')
 
 @section('content')
+    @include('layouts_hackaton.credit-card2')
     <div class="container">
         <section>
             <h1 class="main-title" style="font-weight: normal;">¡Nos encanta tu entusiasmo!</h1>
