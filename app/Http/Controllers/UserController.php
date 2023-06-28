@@ -2,15 +2,19 @@
 
 namespace App\Http\Controllers;
 
+use App\DataTables\UsersDataTable;
+
+use App\Http\Requests\UserRequest;
+
+use App\Models\PermissionModule;
 use App\Models\Role;
 use App\Models\User;
-use Illuminate\View\View;
-use Illuminate\Http\Response;
-use App\Models\PermissionModule;
-use App\DataTables\UsersDataTable;
-use App\Http\Requests\UserRequest;
+
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+
+use Illuminate\View\View;
 
 class UserController extends Controller
 {
@@ -57,9 +61,9 @@ class UserController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(string $id): Response
+    public function show(string $id): RedirectResponse
     {
-        //
+        return redirect()->route('home.index');
     }
 
     /**

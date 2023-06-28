@@ -1,6 +1,8 @@
-<div class="form-group">
-    <label for="name">Name</label>
-    <input type="text" class="form-control" id="name" name="name" placeholder="Enter name" value="{{$role->name ?? ''}}">
+<div class="card p-4">
+    <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" class="form-control" id="name" name="name" placeholder="Enter name" value="{{$role->name ?? ''}}">
+    </div>
 </div>
 
 <div class="row">

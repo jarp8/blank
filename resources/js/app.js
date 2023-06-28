@@ -1,5 +1,8 @@
 // import './bootstrap';
 
+import 'laravel-datatables-vite';
+import 'datatables.net-responsive-bs5'
+
 //Delete datatable item
 window.deleteDataTableItem = () => 
     $(".delete-modal").on("click", function() {

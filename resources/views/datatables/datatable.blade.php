@@ -13,33 +13,35 @@
 @stop
 
 @section('css')
+    @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+
     {{-- Bootstrap4 --}}
-    <link rel="stylesheet" href="{{asset('vendor/datatables/css/dataTables.bootstrap4.min.css')}}">
+    {{-- <link rel="stylesheet" href="{{asset('vendor/datatables/css/dataTables.bootstrap4.min.css')}}"> --}}
     {{-- Bootstrap4 responsive --}}
-    <link rel="stylesheet" href="{{asset('vendor/datatables/css/responsive.bootstrap4.min.css')}}">
+    {{-- <link rel="stylesheet" href="{{asset('vendor/datatables/css/responsive.bootstrap4.min.css')}}"> --}}
     {{-- Bootstrap4 buttons --}}
-    <link rel="stylesheet" href="{{asset('vendor/datatables/css/buttons.bootstrap4.min.css')}}">
+    {{-- <link rel="stylesheet" href="{{asset('vendor/datatables/css/buttons.bootstrap4.min.css')}}"> --}}
 @stop
 
 @section('js')
     {{-- deleteDataTableItem --}}
-    @vite('resources/js/app.js')
+    {{-- @vite('resources/js/app.js') --}}
 
     {{-- DataTable jquery --}}
-    <script src="{{asset('vendor/datatables/js/jquery.dataTables.min.js')}}"></script>
+    {{-- <script src="{{asset('vendor/datatables/js/jquery.dataTables.min.js')}}"></script> --}}
     
     {{-- Bootstrap4 --}}
-    <script src="{{asset('vendor/datatables/js/dataTables.bootstrap4.min.js')}}"></script>
+    {{-- <script src="{{asset('vendor/datatables/js/dataTables.bootstrap4.min.js')}}"></script> --}}
 
     {{-- DataTable responsive --}}
-    <script src="{{asset('vendor/datatables/js/dataTables.responsive.min.js')}}"></script>
-    <script src="{{asset('vendor/datatables/js/responsive.bootstrap4.min.js')}}"></script>
+    {{-- <script src="{{asset('vendor/datatables/js/dataTables.responsive.min.js')}}"></script>
+    <script src="{{asset('vendor/datatables/js/responsive.bootstrap4.min.js')}}"></script> --}}
 
     {{-- DataTable buttons --}}
-    <script src="{{asset('vendor/datatables/js/dataTables.buttons.min.js')}}"></script>
+    {{-- <script src="{{asset('vendor/datatables/js/dataTables.buttons.min.js')}}"></script>
     <script src="{{asset('vendor/datatables/js/buttons.bootstrap4.min.js')}}"></script>
-    <script src="{{asset('vendor/datatables/js/buttons.server-side.js')}}"></script>
+    <script src="{{asset('vendor/datatables/js/buttons.server-side.js')}}"></script> --}}
 
     {{-- TODO: Cambiar el cdn de colVis a local --}}
-    <script src="https://cdn.datatables.net/buttons/2.3.4/js/buttons.colVis.min.js"></script>
+    {{-- <script src="https://cdn.datatables.net/buttons/2.3.4/js/buttons.colVis.min.js"></script> --}}
 @stop

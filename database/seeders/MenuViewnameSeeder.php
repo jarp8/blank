@@ -20,7 +20,7 @@ class MenuViewnameSeeder extends Seeder
         $function = PermissionFunction::where('name', 'index')->first();
 		$modules = PermissionModule::where('permission_module_type_id', PermissionModule::VIEW)->get();
         
-		foreach ($modules as $key => $module) {
+		foreach ($modules as $module) {
 			$permission = PermissionPermission::where([
                 'permission_module_id' => $module->id, 
                 'permission_function_id' => $function->id

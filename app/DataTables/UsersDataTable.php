@@ -61,7 +61,9 @@ class UsersDataTable extends BlankDataTable
         ->stateSaveParams('function(settings, data){ delete data.search; }')
         ->buttons([
             Button::make('excel'),
-            Button::make('colvis')
+            Button::make('reload'),
+            // Button::make('reset'),
+            // Button::make('colvis')
         ]);
 
         return $html;

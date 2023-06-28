@@ -16,7 +16,7 @@ class PermissionModuleSeeder extends Seeder
     public function run(): void
     {
         // Dashboard
-        (new PermissionModuleClass(
+        $home = (new PermissionModuleClass(
             ['name' => 'home', 'moduleType' => PermissionModule::VIEW, 'icon'=> 'fa fa-home']
         ))
         ->insertModule()

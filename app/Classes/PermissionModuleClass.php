@@ -145,6 +145,19 @@ class PermissionModuleClass {
         return $this;
     }
 
+    public function addPermissions($permissions)
+    {
+        $this->createPermissionFunctionIfNotExist($permissions);
+
+		$functions = PermissionFunction::whereIn('name', $permissions)->get();
+
+        $modules = PermissionModule::where('id', $this->moduleId)->get();
+
+        $this->insertPermissions($modules, $functions);
+
+        return $this;
+    }
+
     public function addPermissionToModule($module, $permissions)
     {
         $this->createPermissionFunctionIfNotExist($permissions);
@@ -159,8 +172,8 @@ class PermissionModuleClass {
 
     public function insertPermissions($modules, $functions)
     {
-        foreach ($modules as $key => $module) {
-            foreach ($functions as $key => $function) {
+        foreach ($modules as $module) {
+            foreach ($functions as $function) {
                 PermissionPermission::FirstOrcreate([
                     'relation' => "{$module->name}.{$function->name}", 
                     'permission_module_id' => $module->id, 

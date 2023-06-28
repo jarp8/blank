@@ -2,8 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use App\Classes\MainMenuClass;
-
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
